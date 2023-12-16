@@ -45,7 +45,6 @@ public class MyDataBase {
                     bolt integer
                     )
                     """;
-
         execute(sql);
     }
 

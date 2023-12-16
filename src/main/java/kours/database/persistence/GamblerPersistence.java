@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class GamblerPersistence {
 
-    private final MyDataBase db = MyDataBase.getInstance();
+    public MyDataBase db = MyDataBase.getInstance();
     private static final String NIK_NAME = "name";
     private static final String BOLT_NAME = "bolt";
     private static final String GAMBLERS_NAME = "gamblers";
@@ -87,6 +87,9 @@ public class GamblerPersistence {
                 BOLT_NAME,
                 GAMBLERS_NAME
         );
+        if (fromDB == null) {
+            return null;
+        }
 
         return fromDB;
     }
